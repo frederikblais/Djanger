@@ -4,6 +4,8 @@
 
 <img src="Images/python.png" alt="Pyhton" width="100"/>
 
+<img src="Images/twitter.png" alt="Twitter" width="170"/>
+
 <img src="Images/django.png" alt="Django" width="195"/>
 
 </p>
