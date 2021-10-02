@@ -31,7 +31,7 @@ class MyStreamListner(tweepy.StreamListener):
             else:
                 api = get_auth_api()
                 resp = api.create_favorite(tweet_id)
-                print(tweet_id)
+                print('Liked tweet: ',tweet_id)
 
     def on_error(self, status_code):
         if status_code == 420:
