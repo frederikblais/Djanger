@@ -33,3 +33,15 @@ Access the web page:
 Like tweets with the Database keywords
 
 `` python manage.py like_tweet ``
+
+Retweet with the Database keywords
+
+`` python manage.py retweet_tweet ``
+
+Dm the latest followers with the Database message
+
+`` python manage.py dm_new_follower ``
+
+Save all inbound dms to the Database
+
+`` python manage.py save_inbound_dm ``
