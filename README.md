@@ -10,7 +10,7 @@
 
 </p>
 
-Python & Django application that communicates with the `Twitter API`
+Python & Django application that communicates with the Twitter API
 
 ## Installation
 
