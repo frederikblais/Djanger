@@ -36,6 +36,7 @@ blocks:
           commands:
             - cd bot
             - python manage.py check --deploy
+            - ls
         - name: Style check
           commands:
             - pip install flake8
