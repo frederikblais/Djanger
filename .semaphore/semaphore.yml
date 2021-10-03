@@ -30,7 +30,6 @@ blocks:
           commands:
             - cd bot
             - python manage.py test
-            - python manage.py runserver
         - name: Checklist
           commands:
             - cd bot
