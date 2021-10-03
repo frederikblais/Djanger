@@ -14,5 +14,6 @@ blocks:
             - checkout
             - mkdir .pip_cache
             - cache restore
-            - pip install --cache-dir .pip_cache -r/Users/frederikblais/Documents/Dev/Djanger/requirements.txt
+            - pip freeze > requirements.txt
+            - pip install --cache-dir .pip_cache requirements.txt
             - cache store
