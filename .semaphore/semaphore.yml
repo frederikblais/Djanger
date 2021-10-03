@@ -34,9 +34,9 @@ blocks:
             - python manage.py test
         - name: Checklist
           commands:
-            - cd martor_demo
+            - cd bot
             - python manage.py check --deploy
         - name: Style check
           commands:
             - pip install flake8
-            - flake8 martor_demo/ --max-line-length=127
+            - flake8 bot/ --max-line-length=127
