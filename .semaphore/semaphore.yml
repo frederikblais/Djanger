@@ -30,11 +30,8 @@ blocks:
           commands:
             - cd bot
             - python manage.py test
+            - python manage.py runserver
         - name: Checklist
           commands:
             - cd bot
             - python manage.py check --deploy
-        - name: Style check
-          commands:
-            - pip install flake8
-            - flake8 bot/ --max-line-length=127
