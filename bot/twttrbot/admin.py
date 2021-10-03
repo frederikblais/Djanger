@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import *
+from .models import TweetLookUpWord, TweetLookUpBadWord, OutboundDirectMessage, TweetLookUpCoordinates
 
 admin.site.register(TweetLookUpWord)
 admin.site.register(TweetLookUpBadWord)
