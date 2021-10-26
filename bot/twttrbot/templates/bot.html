@@ -8,6 +8,7 @@
   <link href="/static/css/style.css" rel="stylesheet">
 {% endblock %}
 {% block body %}
+
 <body id="page-top">
 
     <!-- Navbar -->
@@ -26,7 +27,7 @@
     <ul class="sidebar navbar-nav">
         <div>
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="/">
                   <i class="fas fa-fw fa-tachometer-alt"></i>
                   <span>Home</span>
                 </a>
@@ -67,16 +68,19 @@
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="#">Home</a>
+            <a href="/">Home</a>
           </li>
-          <li class="breadcrumb-item active">Twitter Feed</li>
+          <li class="breadcrumb-item active">Bot</li>
         </ol>
 
     <!-- CONTENT -->
-    <img id="img" src="../static/img/bot.jpeg" alt="bot profile picture">
-    <br>
-    <a href="https://twitter.com/BFrederikblais?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-lang="en" data-dnt="true" data-show-count="false">Follow @BFrederikblais</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <a class="twitter-timeline" data-lang="en" data-dnt="true" data-theme="light" href="https://twitter.com/BFrederikblais?ref_src=twsrc%5Etfw">Tweets by BFrederikblais</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="run_script">Run script</button>
+    </form>
+
+
   <!-- Bootstrap core JavaScript-->
   <script src="/static/vendor/jquery/jquery.min.js"></script>
   <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

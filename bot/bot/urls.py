@@ -19,5 +19,6 @@ from twttrbot import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('bot/', views.Bot.as_view(), name='bot'),
     path('', views.Index.as_view(), name='index'),
 ]
