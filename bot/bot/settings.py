@@ -11,6 +11,11 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import environ
+
+env = environ.Env()
+# reading .env file
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -19,8 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-v)^(on-i1yt)u&1dn(fy2e@3k_x9_trt7u%9bawcp3es98h236'
+# Raises django's ImproperlyConfigured exception if SECRET_KEY not in os.environ
+SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -79,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'twitterbot',
         'USER': 'postgres',
-        'PASSWORD': 'Wendy12345678=',
+        'PASSWORD': env("PASSWORD"),
         'PORT': '5432'
     }
 }
@@ -130,14 +135,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # API Auth Bot Account
 
-API_KEY = 'FUsDbQeJ8opVqS5roK5pQcGGJ'
-API_KEY_SECRET = 'AfuEp1sdFHldKs0cc7zGhEJ1Dw24P9egAMdTm6tCRG9L9ZU23K'
-ACCESS_TOKEN = '1444398760033980416-dTEA11viGl8maEJYNRrFvkkbSsWiFn'
-ACCESS_TOKEN_SECRET = 'NNNc207IzGwIjpAfobcFDNu1rC6JEgWrYNTFqYfQt66GC'
+API_KEY = env('API_KEY')
+API_KEY_SECRET = env('API_KEY_SECRET')
+ACCESS_TOKEN = env('ACCESS_TOKEN')
+ACCESS_TOKEN_SECRET = env('ACCESS_TOKEN_SECRET')
 
-# API Auth Main Account
-#
-# API_KEY = 'ryEePFBgvNWDZPzAju7goDFg2'
-# API_KEY_SECRET = '5IXeUndCbBNUvuLaSd3rJLozIDOBX2dtD9Qcfo0o7oSIDURr8a'
-# ACCESS_TOKEN = '2681597373-050TTScYRWQiMsZPOqFtMkQfEf6kCumsTlZ9aqW'
-# ACCESS_TOKEN_SECRET = 'TgGaZ7k4QNyOKH9caoGCDZtEVeeYzcVoF1innnhdBxbgx'
+# API_KEY = 'FUsDbQeJ8opVqS5roK5pQcGGJ'
+# API_KEY_SECRET = 'AfuEp1sdFHldKs0cc7zGhEJ1Dw24P9egAMdTm6tCRG9L9ZU23K'
+# ACCESS_TOKEN = '1444398760033980416-dTEA11viGl8maEJYNRrFvkkbSsWiFn'
+# ACCESS_TOKEN_SECRET = 'NNNc207IzGwIjpAfobcFDNu1rC6JEgWrYNTFqYfQt66GC'
